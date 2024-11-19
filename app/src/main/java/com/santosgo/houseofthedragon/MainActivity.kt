@@ -11,14 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        /*
-        enableEdgeToEdge()
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        */
 
         //intent para detectar si se ha pulsado salir.
         if(intent.getBooleanExtra("Exit",false))
@@ -43,22 +35,20 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+    /* Seguimiento del estado de la actividad*/
     companion object {
         const val LIFECLICLE = "LifeCycle"
     }
 
-
-    /* */
     override fun onRestart() {
         super.onRestart()
         Log.d(LIFECLICLE,"La Activity ha sido reiniciada (Restarted)")
     }
-
     override fun onStart() {
         super.onStart()
         Log.d(LIFECLICLE,"La Activity ha sido iniciada (Started)")
     }
-
     override fun onResume() {
         super.onResume()
         Log.d(LIFECLICLE,"La Activity ha pasado a primer plano (Resumed)")
@@ -68,12 +58,10 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.d(LIFECLICLE,"La Activity ha sido pausada (Paused)")
     }
-
     override fun onStop() {
         super.onStop()
         Log.d(LIFECLICLE,"La Activity ha sido parada (Stopped)")
     }
-
     override fun onDestroy() {
         super.onDestroy()
         Log.d(LIFECLICLE,"La Activity ha sido destruida (Destroyed)")

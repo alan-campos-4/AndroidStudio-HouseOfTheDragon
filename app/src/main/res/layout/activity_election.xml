@@ -14,4 +14,25 @@
         android:layout_height="wrap_content"
         android:text="@string/greeting" />
 
+    <CheckBox android:id="@+id/checkboxRaenria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/support1" />
+    <CheckBox android:id="@+id/checkboxAegon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/support2" />
+
+    <TextView
+        android:id="@+id/tvReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/kneel" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>
